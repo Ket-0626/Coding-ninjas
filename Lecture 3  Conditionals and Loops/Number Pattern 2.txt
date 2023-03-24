@@ -1,0 +1,46 @@
+Number Pattern 2
+
+Print the following pattern
+Pattern for N = 4
+
+. . . 1
+. . 2 3
+. 3 4 5
+4 5 6 7
+
+The dots represent spaces.
+
+----------------------------------------------------
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i, j, k, N;
+
+    cin >> N;
+
+    for(i=1; i<=N; i++)
+    {
+        k = i;
+
+        //.......
+
+        for(int m=N-i; m>0; m--)
+        cout<<" ";
+
+        // Logic to print numbers
+        for(j=1; j<=i; j++, k++)
+        {
+            cout << k;
+        }
+
+        //.........
+
+        cout << endl;
+    }
+
+    return 0;
+}
